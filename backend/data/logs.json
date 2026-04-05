@@ -1,0 +1,16 @@
+[
+  {
+    "id": "log_1",
+    "userId": "admin_1",
+    "action": "SYSTEM_BOOT",
+    "details": "系統啟動成功",
+    "timestamp": "2026-04-05T04:00:00Z"
+  },
+  {
+    "id": "log_2",
+    "userId": "admin_1",
+    "action": "ADMIN_LOGIN",
+    "details": "管理員登入成功",
+    "timestamp": "2026-04-05T04:05:00Z"
+  }
+]

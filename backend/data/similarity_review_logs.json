@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sim_1",
+    "source_import_id": "imp_1",
+    "similarity_score": 0.85,
+    "matched_reasons": ["高比例逐字重合", "結構高度相似"],
+    "status": "flagged",
+    "checked_at": "2026-04-05T10:05:00Z"
+  },
+  {
+    "id": "sim_2",
+    "source_import_id": "imp_2",
+    "similarity_score": 0.32,
+    "matched_reasons": ["部分關鍵字重合"],
+    "status": "ignored",
+    "checked_at": "2026-04-05T11:20:00Z"
+  }
+]

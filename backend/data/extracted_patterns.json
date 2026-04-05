@@ -1,0 +1,22 @@
+[
+  {
+    "id": "pat_1",
+    "source_import_id": "imp_1",
+    "extracted_json": {
+      "source_summary": "促銷活動貼文",
+      "content_theme": "限時優惠",
+      "target_audience": "一般消費者",
+      "tone_style": "興奮、急迫",
+      "writing_structure": "【標題】+ 產品優點 + 優惠資訊 + 呼籲行動",
+      "cta_pattern": "現在下單",
+      "component_blocks": ["標題區", "產品敘述", "優惠詳情", "CTA"],
+      "reusable_fields": ["優惠名稱", "折價金額"],
+      "template_type_recommendation": "電商促銷",
+      "risk_flags": [],
+      "transformation_notes": "將具體金額改為變數"
+    },
+    "risk_flags": [],
+    "approved_status": "pending",
+    "created_at": "2026-04-05T10:01:00Z"
+  }
+]

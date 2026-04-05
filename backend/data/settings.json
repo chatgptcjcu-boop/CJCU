@@ -1,0 +1,12 @@
+{
+  "defaultModel": "gemini-3-flash-preview",
+  "safetySettings": {
+    "harassment": "BLOCK_MEDIUM_AND_ABOVE",
+    "hateSpeech": "BLOCK_MEDIUM_AND_ABOVE",
+    "sexuallyExplicit": "BLOCK_MEDIUM_AND_ABOVE",
+    "dangerousContent": "BLOCK_MEDIUM_AND_ABOVE"
+  },
+  "defaultOutputFormat": "markdown",
+  "enabledTaskTypes": ["news", "presentation", "lesson", "official", "image_prompt"],
+  "defaultSystemPrompt": "你是一位專業的 AI 助手，請根據使用者的需求生成高品質的內容。"
+}

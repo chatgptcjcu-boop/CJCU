@@ -1,0 +1,5 @@
+{
+  "name": "AI 內容生成管理系統",
+  "description": "專業的 AI 內容生成平台，支援前台任務建立與後台模板/資料來源管理。",
+  "requestFramePermissions": []
+}

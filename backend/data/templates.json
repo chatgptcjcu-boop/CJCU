@@ -1,0 +1,32 @@
+[
+  {
+    "id": "news_rewrite",
+    "name": "新聞改寫模板",
+    "type": "news",
+    "system_instruction": "你是一位專業的新聞編輯，擅長將原始資訊轉化為引人入勝且專業的新聞稿。",
+    "prompt_template": "請根據以下資訊撰寫一篇新聞稿：\n主題：{{topic}}\n關鍵字：{{keywords}}\n目標受眾：{{audience}}\n語氣風格：{{tone}}\n附加限制：{{extraConstraints}}",
+    "outputFormat": "markdown",
+    "isActive": true,
+    "version": "1.0"
+  },
+  {
+    "id": "presentation_outline",
+    "name": "簡報大綱模板",
+    "type": "presentation",
+    "system_instruction": "你是一位專業的簡報設計師，擅長建立結構清晰、邏輯嚴密的簡報大綱。",
+    "prompt_template": "請為以下主題設計一份簡報大綱：\n主題：{{topic}}\n目標受眾：{{audience}}\n語氣風格：{{tone}}\n附加限制：{{extraConstraints}}",
+    "outputFormat": "markdown",
+    "isActive": true,
+    "version": "1.0"
+  },
+  {
+    "id": "slide_yaml_generator",
+    "name": "連續投影片 YAML 生成系統",
+    "type": "presentation",
+    "system_instruction": "你是一個「連續投影片 YAML 生成系統」，用於教學簡報與教材內容輸出。你必須嚴格遵守固定的 YAML 版型結構，不可改變欄位結構，只能填寫內容。所有輸出必須是純 YAML 格式。絕對不可輸出任何 Markdown 標記（如 ```yaml）或說明文字。",
+    "prompt_template": "請依據以下教學主題生成完整簡報 YAML：\n\n主題：{{topic}}\n目標受眾：{{audience}}\n語氣風格：{{tone}}\n附加限制：{{extraConstraints}}\n\n【核心要求】\n1. 所有投影片使用統一 schema\n2. 每一頁都必須包含 header / body / footer / style\n3. AI 不可改變欄位結構，只能填內容\n4. 每一頁需自動編頁碼\n5. 每一頁需自動帶入統一設計元素\n\n【全域設定（Global Config）】\nglobal:\n  course_name: \"{{topic}}\"\n  unit_name: \"單元名稱\"\n  provider: \"開課單位名稱\"\n  logo_url: \"https://your-logo.png\"\n  date: \"2026-04-05\"\n  style:\n    theme: \"科技教學風\"\n    primary_color: \"#1E3A8A\"\n    secondary_color: \"#F59E0B\"\n    background_style: \"漸層 or 淺色底\"\n    font_title: \"Noto Sans TC Bold\"\n    font_body: \"Noto Sans TC Regular\"\n\n【單頁投影片固定結構】\nslides:\n  - slide_id: \"slide_01\"\n    header:\n      logo: \"{global.logo_url}\"\n      unit_name: \"{global.unit_name}\"\n      date: \"{global.date}\"\n      page: \"1/總頁數\"\n    body:\n      title: \"本頁標題\"\n      subtitle: \"副標（可選）\"\n      content:\n        - \"重點1\"\n        - \"重點2\"\n      visual_hint: \"圖片或插圖建議\"\n    footer:\n      note: \"補充或來源\"\n    style:\n      background: \"{global.style.background_style}\"\n      primary_color: \"{global.style.primary_color}\"\n      font_title: \"{global.style.font_title}\"\n\n【生成規則】\n1. 至少生成 8–12 頁\n2. 第一頁必為封面\n3. 第二頁為學習目標\n4. 中間為教學內容\n5. 最後一頁為總結或CTA\n\n每頁要求：\n- 一頁一主題\n- 每頁不超過 5 個重點\n- 語句簡短、可投影閱讀\n- 保持教學邏輯連貫\n\n【嚴格遵守規則】\n1. 不可刪除 header / body / footer / style\n2. 不可新增未定義欄位\n3. 不可輸出 JSON 或 Markdown（包含 ```yaml 標記），只能輸出純 YAML 文字\n4. 不可輸出任何說明文字\n5. 所有頁面必須套用 global 設定\n6. page 欄位必須正確累加（如 1/10, 2/10...）\n7. 若內容不足，請補齊合理教學內容，但不得省略頁數。",
+    "outputFormat": "yaml",
+    "isActive": true,
+    "version": "1.0"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "imp_1",
+    "import_name": "FB 爆款電商文案",
+    "import_type": "text",
+    "source_platform": "facebook",
+    "source_text": "【限時優惠】這款產品真的太好用了！現在下單現折 $500，錯過不再！",
+    "import_goal": "文案模板",
+    "extraction_mode": "抽取結構+風格",
+    "keep_original": true,
+    "create_reusable": true,
+    "imported_by": "user_1",
+    "created_at": "2026-04-05T10:00:00Z"
+  }
+]

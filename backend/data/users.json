@@ -1,0 +1,16 @@
+[
+  {
+    "id": "admin_1",
+    "name": "系統管理員",
+    "email": "admin12345@ai.toolkit",
+    "password": "admin@&$)(",
+    "role": "admin"
+  },
+  {
+    "id": "user_1",
+    "name": "測試使用者",
+    "email": "user12345@ai.toolkit",
+    "password": "user”@&$)",
+    "role": "user"
+  }
+]
