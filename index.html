@@ -1,13 +1,208 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CJCU 專案導覽目錄</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #1557b0;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #202124;
+      --text-sub: #5f6368;
+      --border: #dadce0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand h1 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .badge {
+      background: #e8f0fe;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 12px;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: #f1f3f4;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: 1px solid var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+    .main-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    /* Sidebar */
+    aside {
+      width: 260px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--border);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      overflow-y: auto;
+    }
+    .sidebar-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+    .nav-item a:hover {
+      background: #f1f3f4;
+    }
+    .nav-item.active a {
+      background: #e8f0fe;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .date-tag {
+      font-size: 0.75rem;
+      background: rgba(26, 115, 232, 0.1);
+      color: var(--primary);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    /* Content viewport */
+    .content-area {
+      flex: 1;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      flex: 1;
+    }
+    @media (max-width: 768px) {
+      aside {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>CJCU 專案入口</h1>
+      <span class="badge">GitHub Pages</span>
+    </div>
+    <div class="nav-actions">
+      <a href="2026-10-13/" class="btn btn-outline" target="_blank">新視窗開啟分頁</a>
+      <a href="https://script.google.com/macros/s/AKfycbyy6WRyR_RvzXnL9fgQ663yjrFg5mhi2JjDl5NmbcHPOffGJJ5PAPNEHvmmzeDHyrlG/exec" class="btn btn-primary" target="_blank" rel="noopener noreferrer">原始 GAS 連結</a>
+    </div>
+  </header>
 
+  <div class="main-container">
+    <aside>
+      <div class="sidebar-title">📅 日期目錄分頁</div>
+      <ul class="nav-list">
+        <li class="nav-item active">
+          <a href="2026-10-13/" target="app-frame" onclick="setActive(this)">
+            <span>2026-10-13</span>
+            <span class="date-tag">本日最新</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="content-area">
+      <iframe id="app-frame" name="app-frame" src="2026-10-13/index.html"></iframe>
+    </main>
+  </div>
+
+  <script>
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      el.closest('.nav-item').classList.add('active');
+    }
+  </script>
+</body>
+</html>
